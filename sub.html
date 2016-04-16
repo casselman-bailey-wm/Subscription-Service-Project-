@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<head>
+    <title>Subscription</title>
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="sub.js"></script>
+    <style>
+        #navi{
+            width: 100%;
+            height: 20%;
+            background-color: darkred;
+        }
+        #form{
+            opacity: .95;
+            margin-top: 12%;
+            width: 45%;
+            height: 25%;
+            background-color: lightgray;
+            margin-bottom: 2%;
+        }
+
+        #fname{
+            ;
+        }
+
+        #background{
+            width: 100%;
+            height: 100%;
+            background-color: yellow;
+             }
+        body{
+            background-image: url('http://gamesmeta.com/wp-content/uploads/2015/02/1-other-video-games-video-game-art-wallpaper-5-1.jpg');
+            background-size: 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+<div id="header" class="wrapper">
+    <nav class="navbar navbar-default navbar-fixed-top navbar-shrink" id="navi">
+<h1 style="color:ghostwhite; text-align: center; font-family: 'sans-serif', Impact" >GameSub</h1>
+    </nav>
+</div>
+<div id="background" class="background-image">
+
+</div>
+<center>
+<div id="form" style=" box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+<form id="family" method="POST">
+    <div class="form-group">
+        <label>Publisher</label>
+        <select name="Publisher" id="pub" onchange="showForm()">
+            <option id="default" value="0">Default</option>
+            <option id="ubisoft" value="1">Ubisoft</option>
+            <option id="bethesda" value="2">Bethesda</option>
+            <option id="2k" value="3">2k</option>
+            <option id="nintendo" value="4">Nintendo</option>
+            <option id="ea" value="5">EA</option>
+            <option id="rockstar" value="6">Rockstar</option>
+            <option id="squareEnix" value="7">Square Enix</option>
+            <option id="neatherRealm" value="8">NeatherRealm</option>
+            <option id="capcom" value="9">Capcom</option>
+        </select>
+    </div>
+    <div id="game" class="form-group">
+        <label>Game</label>
+        <select>
+            <option>Default</option>
+            <optgroup label="Please Select A Publisher" id="noselect" onchange="showform"></optgroup>
+            <optgroup label="Ubisoft" id="ubisoftg" style="display: none" onchange="showForm()">
+                <option >Assassin's Creed</option>
+                <option >FarCry</option>
+                <option >Just Dance</option>
+                <option >Tom Clancy</option>
+                <option >Rayman</option>
+            </optgroup>
+            <optgroup label="Bethesda"  id="bethesdag" style="display: none" onchange="showForm()">
+                <option>ElderScrolls</option>
+                <option>Fallout</option>
+            </optgroup>
+            <optgroup label="2K" id="2kg" style="display: none" onchange="showForm()">
+                <option>Borderlands</option>
+                <option>Civilization</option>
+                <option>WWE</option>
+                <option>NHL</option>
+                <option>NBA</option>
+            </optgroup>
+            <optgroup label="Nintendo" id="nintendog" style="display: none" onchange="showForm()">
+                <option>Pokemon</option>
+                <option>Mario</option>
+                <option>Zelda</option>
+            </optgroup>
+            <optgroup label="EA" id="eag" style="display: none" onchange="showForm()">
+                <option>Sims</option>
+                <option>Dragon Age</option>
+                <option>Mass Effect</option>
+                <option>Need For Speed</option>
+                <option>Plants vs Zombies</option>
+                <option>Battlefield</option>
+                <option>Starwars Battlefront</option>
+                <option>UFC</option>
+                <option>Madden</option>
+                <option>FIFA</option>
+                <option>Skate</option>
+            </optgroup>
+            <optgroup label="Rockstar" id="rockstarg" style="display: none" onchange="showForm()">
+                <option>GTA</option>
+                <option>Red Dead</option>
+            </optgroup>
+            <optgroup label="Square Enix" id="squareEnixg" style="display: none" onchange="showForm()">
+                <option>Kingdom Hearts</option>
+                <option>Just Cause</option>
+                <option>Hitman</option>
+                <option>Final Fantasy</option>
+                <option>Tomb Raider</option>
+                <option>Dragon Quest</option>
+            </optgroup>
+            <optgroup label="NeatherRealm" id="neatherRealmg" style="display: none" onchange="showForm()">
+                <option>Mortal Kombat</option>
+                <option>Injustice</option>
+            </optgroup>
+            <optgroup label="Capcom" id="capcomg" style="display: none" onchange="showForm()">
+                <option>Street Fighter</option>
+                <option>Resident Evil</option>
+                <option>Devil May Cry</option>
+            </optgroup>
+    </div>
+    <div id="fname" class="form-group">
+        <label>First Name</label>
+        <input type="text" class="form-control" name="fname" placeholder="First Name">
+    </div>
+    <div id="lname" class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" name="lname" placeholder="Last Name">
+    </div>
+    <div  id="email" class="form-group">
+        <label>Email</label>
+        <input type="email" class="form-control" name="email" placeholder="Email">
+    </div>
+
+    <div class="form-group">
+        <p class="help-block"></p>
+    </div>
+    <div class="checkbox">
+        <label>
+            <input type="checkbox">
+            Accept terms and services.
+        </label>
+    </div>
+
+    <input type="submit" name="formSubmit" value="Submit">                                                                                                                                                                                                                                          <style>body{background-color: aqua;}</style>
+</form>
+</div>
+</center>
+</body>
+
+</html>
